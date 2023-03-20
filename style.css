@@ -1,6 +1,7 @@
 :root{
     --primary-color: #262626;
     --secondary-color: #D39B59;
+	--secondary-dark-color: #0f0000;
 
 
     --white-color: #ffffff;
@@ -42,6 +43,7 @@ header{
 }
 .header-top li {
 	position: relative;
+    color: var(--white-color)
 }
 .header-top ul ul{
 	position: absolute;
