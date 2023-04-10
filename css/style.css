@@ -8,7 +8,7 @@
 	--light-bg-color: #f2f3f5;
 	--light-text-color: #7c899a;
 	--border-color: #e5e8ec;
-	--dark-color: #0a021c;
+	--dark-color: #262626;
 
     --font-small: 13px;
 	--font-smaller: 11px;
@@ -26,7 +26,7 @@ body{
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 1.4;
-	background-color: var(--secondary-dark-color);
+	background-color: #262626;
 	
 
 }
@@ -196,3 +196,30 @@ main{
 	}
 
 }
+.topnav {
+	overflow: hidden;
+	background-color: #D39B59;
+	
+  }
+  
+  .topnav a {
+	float: left;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+  }
+  
+  .topnav a:hover {
+	background-color: black;
+  }
+  
+  .topnav a.topnav_active {
+	background-color: black;
+	color: white;
+  }
+  .topnav_content{
+	position:relative;
+	margin-left:30%;
+  }
