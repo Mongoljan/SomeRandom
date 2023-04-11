@@ -295,8 +295,21 @@ body{
    }
    .barbers-cards{
 
-    width:40%; height:300px; border-radius: 10px; background-color:white; 
+    width:450px; height:400px; border-radius: 10px; background-color:white
+    ;
+    margin:20px 10px 10px 20px; 
    }
    .barbers-cards-container{
     padding: 20px 20px 20px 20px;
+   }
+   .order-button{
+    width:170px; height:60px; border-radius: 10px;
+    background-color: var(--secondary-color);
+    color:var(--white-color);
+    font-size: 16px;
+   }
+   
+   .order-button:hover{
+    background-color: #D39B90;
+    color:black;
    }
