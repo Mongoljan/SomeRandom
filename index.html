@@ -20,56 +20,81 @@
 </header>
 
 <main>
-    <div class="slider">
-    <div class="slides">
-        <input type="radio"  name="radio-btn" id="radio1">
-        <input type="radio"  name="radio-btn" id="radio2">
-        <input type="radio"  name="radio-btn" id="radio3">
-        <input type="radio"  name="radio-btn" id="radio4">
-        
-        
-        
-        <div class="slide first">
-            <img src="images/slider1.jpg" alt="">
+    <div class="carousel-container">
+        <div class="inner-carousel">
+          <div class="track">
+            <div class="card-container">
+              <div class="card card1"></div>
+            </div>
+            <div class="card-container">
+              <div class="card card2"></div>
+            </div>
+            <div class="card-container">
+              <div class="card card3"></div>
+            </div>
+            <div class="card-container">
+              <div class="card card4"></div>
+            </div>
+            <div class="card-container">
+              <div class="card card5"></div>
+            </div>
+            <div class="card-container">
+              <div class="card card6"></div>
+            </div>
+            <div class="card-container">
+              <div class="card card7"></div>
+            </div>
+            <div class="card-container">
+              <div class="card card8"></div>
+            </div>
+            <div class="card-container">
+              <div class="card card9"></div>
+            </div>
+            <div class="card-container">
+              <div class="card card10">1</div>
+            </div>
+            <div class="card-container">
+              <div class="card card11">1</div>
+            </div>
+            <div class="card-container">
+              <div class="card card12">12</div>
+            </div>
+          </div>
+          <div class="nav">
+            <button class="prev" style="font-size: x-large;"> < </button>
+            <button class="next" style="font-size: x-large;">    >  </button>
+          </div>
         </div>
-        <div class="slide">
-            <img src="images/slider2.jpg" alt="">
-        </div>
-        <div class="slide">
-            <img src="images/slider3.jpg" alt="">
-        </div>
-        <div class="slide">
-            <img src="images/slider4.png" alt="">
-        </div>
-
-
-
-        <div class="navigation-auto">
-            <div class="auto-btn1"></div>
-            <div class="auto-btn2"></div>
-            <div class="auto-btn3"></div>
-            <div class="auto-btn4"></div>
-        </div>
-    </div>
-
-
-    <div class="navigation-manual">
-        <label for="radio1" class="manual-btn"></label>
-        <label for="radio2" class="manual-btn"></label>
-        <label for="radio3" class="manual-btn"></label>
-        <label for="radio4" class="manual-btn"></label>
-    </div>	
-    </div>
+      </div>
 
     <script type="text/javascript">
-    var counter = 1
-    setInterval(function(){
-    document.getElementById('radio' + counter).checked = true;
-    counter++;
-    if(counter > 4){
-        counter = 1;
-    }
-    }, 5000);
+   const prev = document.querySelector(".prev");
+const next = document.querySelector(".next");
+const carousel = document.querySelector(".carousel-container");
+const track = document.querySelector(".track");
+let width = carousel.offsetWidth/3;
+let index = 0;
+window.addEventListener("resize", function () {
+  width = carousel.offsetWidth/3;
+});
+next.addEventListener("click", function (e) {
+  e.preventDefault();
+  index = index + 1;
+  prev.classList.add("show");
+  track.style.transform = "translateX(" + index * -width + "px)";
+  if (track.offsetWidth - index * width < index * width) {
+    next.classList.add("hide");
+  }
+});
+prev.addEventListener("click", function () {
+  index = index - 1;
+  next.classList.remove("hide");
+  if (index === 0) {
+    prev.classList.remove("show");
+  }
+  track.style.transform = "translateX(" + index * -width + "px)";
+});
+
     </script>
 </main>
     
