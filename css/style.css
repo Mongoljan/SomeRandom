@@ -31,17 +31,20 @@ body{
 
 
 .service {
+    margin-top: auto;
     position: relative;
     width: 100%;
     padding: 45px 0 15px 0;
+    background-color: #262626;
+    
     
 }
 .service .service-item {
     position: relative;
     width: 100%;
     text-align: center;
-    margin-bottom: 30px;
-    background: rgba(29, 36, 52, .04);
+    margin-bottom: 60px;
+    background: var(--white-color);
     
 }
 .service .service-img {
@@ -69,36 +72,15 @@ body{
 }
 
 .service .service-item h3 {
+    
     margin: 0;
-    padding: 25px 15px 15px 15px;
+    padding: 10px 10px 10px 10px;
     font-size: 25px;
     font-weight: 700;
+    background-color: var(--white-color);
 }
 
-.service .service-item p {
-    margin: 0;
-    padding: 0 25px 25px 25px;
-    font-size: 16px;
-}
 
-.service .service-item a.btn {
-    position: relative;
-    margin-bottom: 30px;
-    padding: 10px 20px;
-    font-size: var(--font-small);
-    font-weight: 600;
-    color: var(--secondary-color);
-    border: 3px solid var(--secondary-dark-color);
-    border-radius: 5;
-    background: none;
-    transition: .3s;
-}
-
-.service .service-item:hover a.btn {
-    color: var(--dark-color);
-    background: var(--secondary-color);
-    border-color: var(--secondary-color);
-}
 
 
 
