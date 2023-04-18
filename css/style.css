@@ -24,7 +24,7 @@ body{
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 1.4;
-	background-color: #262626;
+	background-color: var(--primary-color);
     overflow-x: hidden;
 }
 
@@ -116,13 +116,13 @@ body{
 }
 .topnav {
 	overflow: hidden;
-	background-color: #D39B59;
+	background-color: var(--secondary-color);
 	
   }
   
   .topnav a {
 	float: left;
-	color: #f2f2f2;
+	color: var(--white-color);
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
@@ -135,7 +135,7 @@ body{
   
   .topnav a.topnav_active {
 	background-color: black;
-	color: white;
+	color: var(--white-color);
   }
   .topnav_content{
 	position:relative;
@@ -158,9 +158,13 @@ body{
     border-left-style: solid;
     border-left-color: #aaa;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 800px) {
     .carousel-container {
       width: 95%;
+    }
+    .topnav_content{
+      margin-left: 0%;
+      position: static;
     }
   }
   .inner-carousel {
@@ -295,7 +299,7 @@ body{
    }
    .barbers-cards{
 
-    width:450px; height:400px; border-radius: 10px; background-color:white
+    width:450px; height:400px; border-radius: 10px; background-color:var(--white-color)
     ;
     margin:20px 10px 10px 20px; 
    }
@@ -312,4 +316,10 @@ body{
    .order-button:hover{
     background-color: #D39B90;
     color:black;
+   }
+   .layout_header{
+    grid-area:header;
+   }
+   .layout_main{
+    grid-area:main;
    }
