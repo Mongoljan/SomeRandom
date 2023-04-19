@@ -6,7 +6,7 @@
 
     --white-color: #ffffff;
 	--border-color: #e5e8ec;
-	--dark-color: #0a021c;
+	--dark-color: #000000;
 
     --font-small: 13px;
 	--font-smaller: 11px;
@@ -219,11 +219,11 @@ body{
   }
   
   .topnav a:hover {
-	background-color: black;
+	background-color: var(--dark-color);
   }
   
   .topnav a.topnav_active {
-	background-color: black;
+	background-color: var(--dark-color);
 	color: var(--white-color);
   }
   .topnav_content{
