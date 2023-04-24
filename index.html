@@ -17,7 +17,7 @@
     <div class="topnav layout_header">
       
         <div class="topnav_content">
-<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-scissors" viewBox="0 0 16 16" id="IconChangeColor"> <path d="M3.5 3.5c-.614-.884-.074-1.962.858-2.5L8 7.226 11.642 1c.932.538 1.472 1.616.858 2.5L8.81 8.61l1.556 2.661a2.5 2.5 0 1 1-.794.637L8 9.73l-1.572 2.177a2.5 2.5 0 1 1-.794-.637L7.19 8.61 3.5 3.5zm2.5 10a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0zm7 0a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0z" id="mainIconPathAttribute"></path> </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-scissors" viewBox="0 0 16 16" id="IconChangeColor"> <path d="M3.5 3.5c-.614-.884-.074-1.962.858-2.5L8 7.226 11.642 1c.932.538 1.472 1.616.858 2.5L8.81 8.61l1.556 2.661a2.5 2.5 0 1 1-.794.637L8 9.73l-1.572 2.177a2.5 2.5 0 1 1-.794-.637L7.19 8.61 3.5 3.5zm2.5 10a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0zm7 0a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0z" id="mainIconPathAttribute"></path> </svg>
           
         <a class="topnav_active" href="./index.html" >Нүүр хуудас</a>
         <a href="./Services.html">Үйлчилгээнүүд</a>
@@ -31,7 +31,7 @@
 <main>
   <div class="layout_main">
     <div class="carousel-container">
-         <div class="inner-carousel">
+        <div class="inner-carousel">
           <div class="track">
             <div class="card-container">
               <img alt="haircut-1" class="card" src="https://cdn.pixabay.com/photo/2018/08/21/23/29/fog-3622519_960_720.jpg"></img>
@@ -71,18 +71,19 @@
             </div>
           </div>
           <div class="nav">
-            <button class="prev" style="font-size: x-large;"> <</button>
-            <button class="next" style="font-size: x-large;">    >  </button>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
           </div>
         </div>
-      </div>
-<div style="display:flex;  justify-content: center;">
-    
-      <a  class="order-button" href="./Branches/index.html">үйлчилгээ авах</a>
+    </div>
+    <div style="display:flex;  justify-content: center;">
+      <a  class="order-button" href="./Branches/index.html">Үйлчилгээ авах</a>
     </div>
   </div>
-    <script>
-   const prev = document.querySelector(".prev");
+
+
+<script>
+const prev = document.querySelector(".prev");
 const next = document.querySelector(".next");
 const carousel = document.querySelector(".carousel-container");
 const track = document.querySelector(".track");
@@ -91,6 +92,7 @@ let index = 0;
 window.addEventListener("resize", function () {
   width = carousel.offsetWidth/3;
 });
+
 next.addEventListener("click", function (e) {
   e.preventDefault();
   index = index + 1;
@@ -100,6 +102,7 @@ next.addEventListener("click", function (e) {
     next.classList.add("hide");
   }
 });
+
 prev.addEventListener("click", function () {
   index = index - 1;
   next.classList.remove("hide");
