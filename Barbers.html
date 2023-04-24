@@ -31,12 +31,29 @@
 <body>
 	<div style="justify-content: end; justify-items: end; display:flex; padding: 40px ">
 		<form id="form">
-			<input type="search" id="query" name="q" placeholder="Үсчний нэрээр хайх">
-			<button>Search</button>
+			<input style="box-sizing: border-box;
+			display: inline-block;
+			height: 35px;
+			border: 4px solid currentColor;
+			padding: calc(var(--size-bezel) * 1.5) var(--size-bezel);
+			color: #D39B59;
+			background: #FFFFFF;
+			border-radius: 5px;" type="search" id="query" name="q" placeholder="Үсчний нэрээр хайх">
+			<button style="  color: #FFFFFF;
+			padding: 10px 25px;
+			background-color: #D39B59;
+			background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 66% at 26% 20%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
+			box-shadow: inset -3px -3px 9px rgba(255, 255, 255, 0.25), inset 0px 3px 9px rgba(255, 255, 255, 0.3), inset 0px 1px 1px rgba(255, 255, 255, 0.6), inset 0px -8px 36px rgba(0, 0, 0, 0.3), inset 0px 1px 5px rgba(255, 255, 255, 0.6), 2px 19px 31px rgba(0, 0, 0, 0.2);
+			border-radius: 5px;
+			font-weight: bold;
+			font-size: 13px;
+			border: 0;
+			touch-action: manipulation;
+			cursor: pointer;" class="buttonSearch">Search</button>
 		</form>
 	</div>
 
-	<div style="display:flex; flex-wrap: wrap; margin-top: 100px;">
+	<div style="display:flex; flex-wrap: wrap; margin-top: 60px; justify-content: center;">
 		<div class="barbers-cards">
 			<div class="barbers-cards-container">
 				<div style="padding-bottom: 20px;">
@@ -44,16 +61,15 @@
 						<img style="border-radius:50%; width:100px;"
 							src="https://e7.pngegg.com/pngimages/683/60/png-clipart-man-s-profile-illustration-computer-icons-user-profile-profile-ico-photography-silhouette-thumbnail.png"></img>
 						<div>
-							<h3 style="margin-left: 60px;">Үсчний нэр А</h3>
-
-							<div style="display: flex; justify-content: center;">
+							<h3 style="margin-left: 20px;">Үсчин А</h3>
+							<div style="display:flex; justify-content:left;">
 								<div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
 								<div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
 								<div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
 								<div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
 								<div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
 							</div>
-							<div>
+							<div style="margin-left: 20px;">
 								<p>Салон: Matrix</p>
 								<p>Салбар: Парк-Од</p>
 							</div>
@@ -62,20 +78,95 @@
 				</div>
 				<div>
 					<p>Холбогдох утас: ********</p>
+					<p>Дотуур дугаар: 110</p>
 				</div>
 				<div>
-					<h5 style="color: skyblue">Сэтгэгдэл А</h5>
-					<p>Nemo enim ipsam voluptaterm quia voluptas sit aspernatur aut</p>
-					<p>bvdkvb</p>
+					<label style="display: inline-block;
+					margin-top: 10px;
+					margin-bottom: 10px;
+					font-weight: bold;
+					color: #D39B59;" for="Comment">Сэтгэгдэл</label>
+					<br>
+					<input style="box-sizing: border-box;
+					display: block;
+					width: 100%;
+					height: 30px;
+					border: 2px solid currentColor;
+					padding: calc(var(--size-bezel) * 1.5) var(--size-bezel);
+					color: #D39B59;
+					background: transparent;
+					border-radius: 5px;" type="text" id="Comment" name="Comment" placeholder="Сэтгэгдэл бичих">
+					<button style="color: grey; border-radius: 5px;
+					 width: 20%; height:25px;
+					 margin-left: 57%;
+					 margin-right: 5px ;" class="button buttonCancel">Reset</button>
+					<button style="color:#D39B59; border-radius: 5px; 
+					width: 20%; height: 25px;
+					margin-top: 8px;
+					margin-right: 0px" class="button buttonSubmit">Submit</button>
+				</div>
+			</div>
+
+
+		</div>
+
+
+
+		<div class="barbers-cards">
+			<div class="barbers-cards-container">
+				<div style="padding-bottom: 20px;">
+					<div style="display:flex">
+						<img style="border-radius:50%; width:100px;"
+							src="https://e7.pngegg.com/pngimages/683/60/png-clipart-man-s-profile-illustration-computer-icons-user-profile-profile-ico-photography-silhouette-thumbnail.png"></img>
+						<div>
+							<h3 style="margin-left: 20px;">Үсчин А</h3>
+							<div style="display:flex; justify-content:left;">
+								<div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
+								<div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
+								<div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
+								<div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
+								<div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
+							</div>
+							<div style="margin-left: 20px;">
+								<p>Салон: Matrix</p>
+								<p>Салбар: Парк-Од</p>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div>
-					<input type="text" id="Comment" name="Comment" placeholder="Сэтгэгдэл бичих">
+					<p>Холбогдох утас: ********</p>
+					<p>Дотуур дугаар: 110</p>
+				</div>
+				<div>
+					<label style="display: inline-block;
+					margin-top: 10px;
+					margin-bottom: 10px;
+					font-weight: bold;
+					color: #D39B59;" for="Comment">Сэтгэгдэл</label>
+					<br>
+					<input style="box-sizing: border-box;
+					display: block;
+					width: 100%;
+					height: 30px;
+					border: 2px solid currentColor;
+					padding: calc(var(--size-bezel) * 1.5) var(--size-bezel);
+					color: #D39B59;
+					background: transparent;
+					border-radius: 5px;" type="text" id="Comment" name="Comment" placeholder="Сэтгэгдэл бичих">
+					<button style="color: grey; border-radius: 5px;
+					 width: 20%; height:25px;
+					 margin-left: 57%;
+					 margin-right: 5px ;" class="button buttonCancel">Reset</button>
+					<button style="color:#D39B59; border-radius: 5px; 
+					width: 20%; height: 25px;
+					margin-top: 8px;
+					margin-right: 0px" class="button buttonSubmit">Submit</button>
 				</div>
 			</div>
 
 
 		</div>
-
 
 
 		<div class="barbers-cards">
@@ -85,131 +176,218 @@
 						<img style="border-radius:50%; width:100px;"
 							src="https://e7.pngegg.com/pngimages/683/60/png-clipart-man-s-profile-illustration-computer-icons-user-profile-profile-ico-photography-silhouette-thumbnail.png"></img>
 						<div>
-							<h3 style="margin-left: 60px;">Үсчиний нэр А</h3>
-
-							<div style="display: flex; justify-content: center;">
+							<h3 style="margin-left: 20px;">Үсчин А</h3>
+							<div style="display:flex; justify-content:left;">
 								<div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
 								<div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
 								<div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
-								<div style="width:10px " class="five-pointed-star"></div>
+								<div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
+								<div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
+							</div>
+							<div style="margin-left: 20px;">
+								<p>Салон: Matrix</p>
+								<p>Салбар: Парк-Од</p>
 							</div>
 						</div>
 					</div>
 				</div>
-				<p>Тухайн үсчиний талаарх хувийн мэдээлэл:
-					утасны дугаар, гаргаж байсан амжилтууд болон бусад зүйлс
-					Ямар чиглэлүүдээр мэргэшсэн зэрэг зүйлсүүдийг хамруулж ойлгож бол болно
-				</p>
-
+				<div>
+					<p>Холбогдох утас: ********</p>
+					<p>Дотуур дугаар: 110</p>
+				</div>
+				<div>
+					<label style="display: inline-block;
+					margin-top: 10px;
+					margin-bottom: 10px;
+					font-weight: bold;
+					color: #D39B59;" for="Comment">Сэтгэгдэл</label>
+					<br>
+					<input style="box-sizing: border-box;
+					display: block;
+					width: 100%;
+					height: 30px;
+					border: 2px solid currentColor;
+					padding: calc(var(--size-bezel) * 1.5) var(--size-bezel);
+					color: #D39B59;
+					background: transparent;
+					border-radius: 5px;" type="text" id="Comment" name="Comment" placeholder="Сэтгэгдэл бичих">
+					<button style="color: grey; border-radius: 5px;
+					 width: 20%; height:25px;
+					 margin-left: 57%;
+					 margin-right: 5px ;" class="button buttonCancel">Reset</button>
+					<button style="color:#D39B59; border-radius: 5px; 
+					width: 20%; height: 25px;
+					margin-top: 8px;
+					margin-right: 0px" class="button buttonSubmit">Submit</button>
+				</div>
 			</div>
 
 
 		</div>
-		<div class="barbers-cards">
+
+				<div class="barbers-cards">
 			<div class="barbers-cards-container">
 				<div style="padding-bottom: 20px;">
 					<div style="display:flex">
 						<img style="border-radius:50%; width:100px;"
 							src="https://e7.pngegg.com/pngimages/683/60/png-clipart-man-s-profile-illustration-computer-icons-user-profile-profile-ico-photography-silhouette-thumbnail.png"></img>
 						<div>
-							<h3 style="margin-left: 60px;">Үсчиний нэр А</h3>
-
-							<div style="display: flex; justify-content: center;">
+							<h3 style="margin-left: 20px;">Үсчин А</h3>
+							<div style="display:flex; justify-content:left;">
 								<div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
 								<div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
 								<div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
-								<div style="width:10px " class="five-pointed-star"></div>
+								<div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
+								<div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
+							</div>
+							<div style="margin-left: 20px;">
+								<p>Салон: Matrix</p>
+								<p>Салбар: Парк-Од</p>
 							</div>
 						</div>
 					</div>
 				</div>
-				<p>Тухайн үсчиний талаарх хувийн мэдээлэл:
-					утасны дугаар, гаргаж байсан амжилтууд болон бусад зүйлс
-					Ямар чиглэлүүдээр мэргэшсэн зэрэг зүйлсүүдийг хамруулж ойлгож бол болно
-				</p>
-
+				<div>
+					<p>Холбогдох утас: ********</p>
+					<p>Дотуур дугаар: 110</p>
+				</div>
+				<div>
+					<label style="display: inline-block;
+					margin-top: 10px;
+					margin-bottom: 10px;
+					font-weight: bold;
+					color: #D39B59;" for="Comment">Сэтгэгдэл</label>
+					<br>
+					<input style="box-sizing: border-box;
+					display: block;
+					width: 100%;
+					height: 30px;
+					border: 2px solid currentColor;
+					padding: calc(var(--size-bezel) * 1.5) var(--size-bezel);
+					color: #D39B59;
+					background: transparent;
+					border-radius: 5px;" type="text" id="Comment" name="Comment" placeholder="Сэтгэгдэл бичих">
+					<button style="color: grey; border-radius: 5px;
+					 width: 20%; height:25px;
+					 margin-left: 57%;
+					 margin-right: 5px ;" class="button buttonCancel">Reset</button>
+					<button style="color:#D39B59; border-radius: 5px; 
+					width: 20%; height: 25px;
+					margin-top: 8px;
+					margin-right: 0px" class="button buttonSubmit">Submit</button>
+				</div>
 			</div>
 
 
 		</div>
-		<div class="barbers-cards">
+
+				<div class="barbers-cards">
 			<div class="barbers-cards-container">
 				<div style="padding-bottom: 20px;">
 					<div style="display:flex">
 						<img style="border-radius:50%; width:100px;"
 							src="https://e7.pngegg.com/pngimages/683/60/png-clipart-man-s-profile-illustration-computer-icons-user-profile-profile-ico-photography-silhouette-thumbnail.png"></img>
 						<div>
-							<h3 style="margin-left: 60px;">Үсчиний нэр А</h3>
-
-							<div style="display: flex; justify-content: center;">
+							<h3 style="margin-left: 20px;">Үсчин А</h3>
+							<div style="display:flex; justify-content:left;">
 								<div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
 								<div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
 								<div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
-								<div style="width:10px " class="five-pointed-star"></div>
+								<div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
+								<div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
+							</div>
+							<div style="margin-left: 20px;">
+								<p>Салон: Matrix</p>
+								<p>Салбар: Парк-Од</p>
 							</div>
 						</div>
 					</div>
 				</div>
-				<p>Тухайн үсчиний талаарх хувийн мэдээлэл:
-					утасны дугаар, гаргаж байсан амжилтууд болон бусад зүйлс
-					Ямар чиглэлүүдээр мэргэшсэн зэрэг зүйлсүүдийг хамруулж ойлгож бол болно
-				</p>
-
+				<div>
+					<p>Холбогдох утас: ********</p>
+					<p>Дотуур дугаар: 110</p>
+				</div>
+				<div>
+					<label style="display: inline-block;
+					margin-top: 10px;
+					margin-bottom: 10px;
+					font-weight: bold;
+					color: #D39B59;" for="Comment">Сэтгэгдэл</label>
+					<br>
+					<input style="box-sizing: border-box;
+					display: block;
+					width: 100%;
+					height: 30px;
+					border: 2px solid currentColor;
+					padding: calc(var(--size-bezel) * 1.5) var(--size-bezel);
+					color: #D39B59;
+					background: transparent;
+					border-radius: 5px;" type="text" id="Comment" name="Comment" placeholder="Сэтгэгдэл бичих">
+					<button style="color: grey; border-radius: 5px;
+					 width: 20%; height:25px;
+					 margin-left: 57%;
+					 margin-right: 5px ;" class="button buttonCancel">Reset</button>
+					<button style="color:#D39B59; border-radius: 5px; 
+					width: 20%; height: 25px;
+					margin-top: 8px;
+					margin-right: 0px" class="button buttonSubmit">Submit</button>
+				</div>
 			</div>
 
 
-
 		</div>
-		<div class="barbers-cards">
+
+				<div class="barbers-cards">
 			<div class="barbers-cards-container">
 				<div style="padding-bottom: 20px;">
 					<div style="display:flex">
 						<img style="border-radius:50%; width:100px;"
 							src="https://e7.pngegg.com/pngimages/683/60/png-clipart-man-s-profile-illustration-computer-icons-user-profile-profile-ico-photography-silhouette-thumbnail.png"></img>
 						<div>
-							<h3 style="margin-left: 60px;">Үсчиний нэр А</h3>
-
-							<div style="display: flex; justify-content: center;">
+							<h3 style="margin-left: 20px;">Үсчин А</h3>
+							<div style="display:flex; justify-content:left;">
 								<div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
 								<div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
 								<div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
-								<div style="width:10px " class="five-pointed-star"></div>
+								<div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
+								<div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
+							</div>
+							<div style="margin-left: 20px;">
+								<p>Салон: Matrix</p>
+								<p>Салбар: Парк-Од</p>
 							</div>
 						</div>
 					</div>
 				</div>
-				<p>Тухайн үсчиний талаарх хувийн мэдээлэл:
-					утасны дугаар, гаргаж байсан амжилтууд болон бусад зүйлс
-					Ямар чиглэлүүдээр мэргэшсэн зэрэг зүйлсүүдийг хамруулж ойлгож бол болно
-				</p>
-
-			</div>
-
-
-		</div>
-		<div class="barbers-cards">
-			<div class="barbers-cards-container">
-				<div style="padding-bottom: 20px;">
-					<div style="display:flex">
-						<img style="border-radius:50%; width:100px;"
-							src="https://e7.pngegg.com/pngimages/683/60/png-clipart-man-s-profile-illustration-computer-icons-user-profile-profile-ico-photography-silhouette-thumbnail.png"></img>
-						<div>
-							<h3 style="margin-left: 60px;">Үсчиний нэр А</h3>
-
-							<div style="display: flex; justify-content: center;">
-								<div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
-								<div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
-								<div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
-								<div style="width:10px " class="five-pointed-star"></div>
-							</div>
-						</div>
-					</div>
+				<div>
+					<p>Холбогдох утас: ********</p>
+					<p>Дотуур дугаар: 110</p>
 				</div>
-				<p>Тухайн үсчиний талаарх хувийн мэдээлэл:
-					утасны дугаар, гаргаж байсан амжилтууд болон бусад зүйлс
-					Ямар чиглэлүүдээр мэргэшсэн зэрэг зүйлсүүдийг хамруулж ойлгож бол болно
-				</p>
-
+				<div>
+					<label style="display: inline-block;
+					margin-top: 10px;
+					margin-bottom: 10px;
+					font-weight: bold;
+					color: #D39B59;" for="Comment">Сэтгэгдэл</label>
+					<br>
+					<input style="box-sizing: border-box;
+					display: block;
+					width: 100%;
+					height: 30px;
+					border: 2px solid currentColor;
+					padding: calc(var(--size-bezel) * 1.5) var(--size-bezel);
+					color: #D39B59;
+					background: transparent;
+					border-radius: 5px;" type="text" id="Comment" name="Comment" placeholder="Сэтгэгдэл бичих">
+					<button style="color: grey; border-radius: 5px;
+					 width: 20%; height:25px;
+					 margin-left: 57%;
+					 margin-right: 5px ;" class="button buttonCancel">Reset</button>
+					<button style="color:#D39B59; border-radius: 5px; 
+					width: 20%; height: 25px;
+					margin-top: 8px;
+					margin-right: 0px" class="button buttonSubmit">Submit</button>
+				</div>
 			</div>
 
 
