@@ -29,7 +29,7 @@
 <main>
   <div class="layout_main">
     <div class="carousel-container">
-         <div class="inner-carousel">
+        <div class="inner-carousel">
           <div class="track">
             <div class="card-container">
               <img alt="haircut-1" class="card" src="https://cdn.pixabay.com/photo/2018/08/21/23/29/fog-3622519_960_720.jpg"></img>
@@ -69,11 +69,11 @@
             </div>
           </div>
           <div class="nav">
-            <button class="prev" style="font-size: x-large;">  </button>
-            <button class="next" style="font-size: x-large;"> > </button>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
           </div>
         </div>
-      </div>
+    </div>
     <div style="display:flex;  justify-content: center;">
       <a  class="order-button" href="./Branches/index.html">Үйлчилгээ авах</a>
     </div>
@@ -81,7 +81,7 @@
 
 
 <script>
-   const prev = document.querySelector(".prev");
+const prev = document.querySelector(".prev");
 const next = document.querySelector(".next");
 const carousel = document.querySelector(".carousel-container");
 const track = document.querySelector(".track");
@@ -90,6 +90,7 @@ let index = 0;
 window.addEventListener("resize", function () {
   width = carousel.offsetWidth/3;
 });
+
 next.addEventListener("click", function (e) {
   e.preventDefault();
   index = index + 1;
@@ -99,6 +100,7 @@ next.addEventListener("click", function (e) {
     next.classList.add("hide");
   }
 });
+
 prev.addEventListener("click", function () {
   index = index - 1;
   next.classList.remove("hide");
