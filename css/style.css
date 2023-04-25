@@ -5,14 +5,14 @@
 
 
     --white-color: #ffffff;
-	--border-color: #e5e8ec;
-	--dark-color: #000000;
+	  --border-color: #e5e8ec;
+	  --dark-color: #000000;
 
     --font-small: 13px;
-	--font-smaller: 11px;
+	  --font-smaller: 11px;
 
-	--percent100: 100%;
-	--percent50: 50%;
+	  --percent100: 100%;
+	  --percent50: 50%;
 }
 
 *{
@@ -40,7 +40,13 @@ body{
     background: var(--primary-color);
     
 }
+.service .container{
+    position: relative;
+    width: 100%;
+    margin-top: 40px;
+}
 .service .service-item {
+    margin:auto;
     position: relative;
     width: 100%;
     text-align: center;
@@ -76,9 +82,10 @@ body{
     
     margin: 0;
     padding: 10px 10px 10px 10px;
-    font-size: 25px;
-    font-weight: 700;
+    font-size: 20px;
+    font-weight: var();
     background-color: var(--white-color);
+    color: var(--secondary-color);
 }
 
 /********* Service end **********/
