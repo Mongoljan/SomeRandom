@@ -37,7 +37,7 @@ body{
     position: relative;
     width: 100%;
     padding: 45px 0 15px 0;
-    background: var(--primary-color);
+    background: var(--white-color);
     
 }
 .service .container{
@@ -84,8 +84,12 @@ body{
     padding: 10px 10px 10px 10px;
     font-size: 20px;
     font-weight: var();
-    background-color: var(--white-color);
+    
+    background-color: var(--secondary-color);
     color: var(--secondary-color);
+}
+.service .service-item h3 a{
+  color: var(--dark-color);
 }
 
 /********* Service end **********/
