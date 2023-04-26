@@ -163,7 +163,6 @@ hr{
 
 .footer {
   position: relative;
-  
   padding-top: 90px;
   background: var(--secondary-color);
 }
@@ -263,9 +262,6 @@ hr{
   color: #D5B981;
   background: #1d2434;
 }
-
-
-
 /********* Footer end **********/
 
 
