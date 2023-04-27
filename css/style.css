@@ -37,7 +37,7 @@ body{
     position: relative;
     width: 100%;
     padding: 45px 0 15px 0;
-    background: var(--primary-color);
+    background: var(--white-color);
     
 }
 .service .container{
@@ -84,8 +84,12 @@ body{
     padding: 10px 10px 10px 10px;
     font-size: 20px;
     font-weight: var();
-    background-color: var(--white-color);
+    
+    background-color: var(--secondary-color);
     color: var(--secondary-color);
+}
+.service .service-item h3 a{
+  color: var(--dark-color);
 }
 
 /********* Service end **********/
@@ -93,6 +97,11 @@ body{
 
 
 /********* Service/Tairalt CSS **********/
+.BigContainer{
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 20px;
+}
 .tairalt {
   width: 100%;
 }
@@ -127,6 +136,36 @@ body{
   border-radius: 10px;
 }
 
+.serviceHeader{
+  padding-left: 30px;
+  display: inline-flex;
+  padding-top: 60px;
+}
+
+.serviceHeader .backbutton{
+  color: var(--secondary-color);
+  
+}
+.title{
+  color: var(--secondary-color);
+}
+hr{
+  color: var(--secondary-color);
+  margin-top: 5px;
+  width: 80%;
+  justify-content: left;
+  height: 10px;
+  background-color: var(--secondary-color);
+}
+.image .save{
+  justify-content: right;
+  padding-right: 0%;
+  display: inline-flex;
+  right: 0px;
+}
+.heart{
+  color: red;
+}
 /********* Service/Tairalt end **********/
 
 
@@ -450,3 +489,14 @@ body{
    .layout_main{
     grid-area:main;
    }
+/********* barbers end **********/
+
+
+
+
+
+/********* Nevtreh css **********/
+
+/********* Nevtreh end **********/
+
+
