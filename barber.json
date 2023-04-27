@@ -1,0 +1,8 @@
+[
+    {"id":"1","firstName":"Тэмүүлэн", "phone":"95129418","profile":"someulr", "intro":"4 жилийн туршлага ","grade":"4","salon":"matrix","address":" Сүхбаатар 5-р хороо "},
+    {"id":"2","firstName":"Гансүх", "phone":"91615676","profile":"someulr", "intro":"3 жилийн туршлага ","grade":"4","salon":"goku","address":"Баянгол 4-р хороо "},
+    { "id":"3","firstName":"Ангараг", "phone":"92222222","profile":"someulr", "intro":"Төрхөөсөө авхуулаад","grade":"3","salon":"Elegance","address":"Чингэлтэй 4-р хороо "},
+    {"id":"2","firstName":"Удвал", "phone":"94655676","profile":"someulr", "intro":"2 жилийн туршлага ","grade":"4.5","salon":"Nana","address":"Сүхбаатар 4-р хороо "},
+    { "id":"3","firstName":"Чинсанаа", "phone":"99232433","profile":"someulr", "intro":"Улаанбаатар үсчингийн тэмцээн ялагч","grade":"4.5","salon":"Bek Salon","address":"Сүхбаатар  12-р хороо "}
+
+]
