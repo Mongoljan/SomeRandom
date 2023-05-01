@@ -8,6 +8,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
 	<title></title>
+	<script>
+		function getParameter(parameterName){
+			let parameters = new URLSearchParams(window.location.search);
+			return parameters.get(parameterName)
+		}
+	</script>
 	<header>
 		<div class="topnav">
 			<div class="topnav_content">
@@ -22,7 +28,8 @@
 	</header>
 </head>
 <body>
-	
+
 </body>
 </html>
+
 

@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE >
+<html lang="mn">
 
 <head>
 	<meta charset="UTF-8">
@@ -10,7 +10,70 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-	<title></title>
+	<title>barbers</title>
+	<style>
+		* {box-sizing: border-box;}
+		/* #region RecentNews styles */
+		.recentNews {
+		  display:block; 
+		  margin:5px; 
+		  padding:5px;
+		  width:400px; 
+		  
+		  background-color:#eee; 
+		  opacity: 1;
+  
+		  animation-name: fadeInAnimation;
+		  animation-duration: 3s;
+		}
+  
+		.recentNews-thumb {
+		  display: inline-block; 
+		  height:80px;
+		}
+  
+		.recentNews-text{
+		  display:inline-block;
+		  height:70px;
+		  width: 300px;
+		  margin:0;
+		  vertical-align:top;
+		}
+  
+		.recentNews-header{
+		  font: normal normal 12px Verdana, sans-serif;
+		}
+		.recentNews-stat{
+		  text-align:right;
+		  color:gray;
+		  font-style:italic;
+		}
+  
+		.recentNews-shareCount{
+		  display:inline;
+		}
+  
+		.recentNews-pubdate{
+		  display:inline;
+		}
+  
+		@keyframes fadeInAnimation { 
+			0% { 
+				opacity: 0; 
+			} 
+			100% { 
+				opacity: 1; 
+			} 
+		} 
+		  /* #endregion  */
+	  </style>
+	  <script type="module" src="./modules/Barbers.js"></script>
+	  <script>
+		function getParameter(parameterName){
+			let parameters = new URLSearchParams(window.location.search);
+			return parameters.get(parameterName)
+		}
+	</script>
 	<header>
 		<div class="topnav">
 			<div class="topnav_content">
@@ -28,9 +91,10 @@
 			</div>
 		</div>
 	</header>
-</head>
+<head>
 
 <body>
+
 	<div style="justify-content: end; justify-items: end; display:flex; padding: 40px ">
 		<form id="form">
 			<input style="box-sizing: border-box;
@@ -54,14 +118,15 @@
 			cursor: pointer;" class="buttonSearch">Search</button>
 		</form>
 	</div>
+	<main id="main"></main>
 
 	<div style="display:flex; flex-wrap: wrap; margin-top: 60px; justify-content: center;">
 		<div class="barbers-cards">
 			<div class="barbers-cards-container">
 				<div style="padding-bottom: 20px;">
 					<div style="display:flex">
-						<img style="border-radius:50%; width:100px;"
-							src="https://e7.pngegg.com/pngimages/683/60/png-clipart-man-s-profile-illustration-computer-icons-user-profile-profile-ico-photography-silhouette-thumbnail.png"></img>
+						<img alt="profile" style="border-radius:50%; width:100px;"
+							src="https://e7.pngegg.com/pngimages/683/60/png-clipart-man-s-profile-illustration-computer-icons-user-profile-profile-ico-photography-silhouette-thumbnail.png">
 						<div>
 							<h3 style="margin-left: 20px;" id="name1"></h3>
 							<div style="display:flex; justify-content:left;">
@@ -118,8 +183,8 @@
 			<div class="barbers-cards-container">
 				<div style="padding-bottom: 20px;">
 					<div style="display:flex">
-						<img style="border-radius:50%; width:100px;"
-							src="https://e7.pngegg.com/pngimages/683/60/png-clipart-man-s-profile-illustration-computer-icons-user-profile-profile-ico-photography-silhouette-thumbnail.png"></img>
+						<img alt="profile" style="border-radius:50%; width:100px;"
+							src="https://e7.pngegg.com/pngimages/683/60/png-clipart-man-s-profile-illustration-computer-icons-user-profile-profile-ico-photography-silhouette-thumbnail.png">
 						<div>
 							<h3 style="margin-left: 20px;" id="name2"></h3>
 							<div style="display:flex; justify-content:left;">
@@ -155,7 +220,7 @@
 					padding: calc(var(--size-bezel) * 1.5) var(--size-bezel);
 					color: #D39B59;
 					background: transparent;
-					border-radius: 5px;" type="text" id="Comment" name="Comment" placeholder="Сэтгэгдэл бичих">
+					border-radius: 5px;" type="text"  name="Comment" placeholder="Сэтгэгдэл бичих">
 					<button style="color: grey; border-radius: 5px;
 					 width: 20%; height:25px;
 					 margin-left: 57%;
@@ -175,8 +240,8 @@
 			<div class="barbers-cards-container">
 				<div style="padding-bottom: 20px;">
 					<div style="display:flex">
-						<img style="border-radius:50%; width:100px;"
-							src="https://e7.pngegg.com/pngimages/683/60/png-clipart-man-s-profile-illustration-computer-icons-user-profile-profile-ico-photography-silhouette-thumbnail.png"></img>
+						<img alt="profile" style="border-radius:50%; width:100px;"
+							src="https://e7.pngegg.com/pngimages/683/60/png-clipart-man-s-profile-illustration-computer-icons-user-profile-profile-ico-photography-silhouette-thumbnail.png">
 						<div>
 							<h3 style="margin-left: 20px;" id="name3"></h3>
 							<div style="display:flex; justify-content:left;">
@@ -212,7 +277,7 @@
 					padding: calc(var(--size-bezel) * 1.5) var(--size-bezel);
 					color: #D39B59;
 					background: transparent;
-					border-radius: 5px;" type="text" id="Comment" name="Comment" placeholder="Сэтгэгдэл бичих">
+					border-radius: 5px;" type="text"  name="Comment" placeholder="Сэтгэгдэл бичих">
 					<button style="color: grey; border-radius: 5px;
 					 width: 20%; height:25px;
 					 margin-left: 57%;
@@ -233,8 +298,8 @@
 			<div class="barbers-cards-container">
 				<div style="padding-bottom: 20px;">
 					<div style="display:flex">
-						<img style="border-radius:50%; width:100px;"
-							src="https://e7.pngegg.com/pngimages/683/60/png-clipart-man-s-profile-illustration-computer-icons-user-profile-profile-ico-photography-silhouette-thumbnail.png"></img>
+						<img alt="profile" style="border-radius:50%; width:100px;"
+							src="https://e7.pngegg.com/pngimages/683/60/png-clipart-man-s-profile-illustration-computer-icons-user-profile-profile-ico-photography-silhouette-thumbnail.png">
 						<div>
 							<h3 style="margin-left: 20px;" id="name4"></h3>
 							<div style="display:flex; justify-content:left;">
@@ -270,7 +335,7 @@
 					padding: calc(var(--size-bezel) * 1.5) var(--size-bezel);
 					color: #D39B59;
 					background: transparent;
-					border-radius: 5px;" type="text" id="Comment" name="Comment" placeholder="Сэтгэгдэл бичих">
+					border-radius: 5px;" type="text"  name="Comment" placeholder="Сэтгэгдэл бичих">
 					<button style="color: grey; border-radius: 5px;
 					 width: 20%; height:25px;
 					 margin-left: 57%;
@@ -289,8 +354,8 @@
 			<div class="barbers-cards-container">
 				<div style="padding-bottom: 20px;">
 					<div style="display:flex">
-						<img style="border-radius:50%; width:100px;"
-							src="https://e7.pngegg.com/pngimages/683/60/png-clipart-man-s-profile-illustration-computer-icons-user-profile-profile-ico-photography-silhouette-thumbnail.png"></img>
+						<img alt="profile" style="border-radius:50%; width:100px;"
+						src="https://e7.pngegg.com/pngimages/683/60/png-clipart-man-s-profile-illustration-computer-icons-user-profile-profile-ico-photography-silhouette-thumbnail.png">
 						<div>
 							<h3 style="margin-left: 20px;" id="name5"></h3>
 							<div style="display:flex; justify-content:left;">
@@ -326,7 +391,7 @@
 					padding: calc(var(--size-bezel) * 1.5) var(--size-bezel);
 					color: #D39B59;
 					background: transparent;
-					border-radius: 5px;" type="text" id="Comment" name="Comment" placeholder="Сэтгэгдэл бичих">
+					border-radius: 5px;" type="text"  name="Comment" placeholder="Сэтгэгдэл бичих">
 					<button style="color: grey; border-radius: 5px;
 					 width: 20%; height:25px;
 					 margin-left: 57%;
