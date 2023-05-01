@@ -1,9 +1,9 @@
-import html from './utility.js'
+import html from "./utility.js";
 
 class Barber_Card extends HTMLElement {
     constructor() {
         super();
-        this.innerHTML = html`
+        this.innerHTML = html `
         <div class="barbers-cards">
         <div class="barbers-cards-container">
             <div style="padding-bottom: 20px;">
@@ -57,8 +57,18 @@ class Barber_Card extends HTMLElement {
                 margin-right: 0px" class="button buttonSubmit">Submit</button>
             </div>
         </div>
-    </div>`
+    </div>`; 
+    }
+    connectedCallback() {
+
+    }
+    disconnectedCallback() {
+    
+    }
+    attributeChangedCallback(attrName, oldVal, newVal) {
+    
     }
 }
 
-window.customElements.define('BarberCard', Barber_Card);
+
+window.customElements.define('barber-cards', Barber_Card);
