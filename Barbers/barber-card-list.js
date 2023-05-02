@@ -22,10 +22,6 @@ class Barber_Card_List extends HTMLElement{
         <barber-cards></barber-cards>
         <barber-cards></barber-cards>
         <barber-cards></barber-cards>
-        <div style="color: #D39B59; 
-        margin-top: 15px;
-        margin-bottom: 15px;"><h3>Нийт сэтгэгдэл: </h3></div>
-        </div>
         
         `;
     }

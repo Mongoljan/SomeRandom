@@ -13,6 +13,8 @@
 	<title>Barbers</title>
 	<script type="module" src="barber-card-list.js"></script>
 	<script type="module" src="barber-cards.js"></script>
+	<script type="module" src="all-comment.js"></script>
+	<script type="module" src="my-component.js"></script>
 	<header>
 		<div class="topnav">
 			<div class="topnav_content">
@@ -35,8 +37,13 @@
 <body>
 	<div style="justify-content: end; justify-items: end; display:flex; padding: 40px ">
 		<form id="form">
-			<input type="search" id="query" name="q" placeholder="Үсчний нэрээр хайх">
-			<button class="buttonSearch">Search</button>
+			<my-component>
+				<p slot="left"><input type="search" id="query" name="q" placeholder="Үсчний нэрээр хайх"></p>
+				<p slot="right"><button class="buttonSearch">Search</button></p>
+			  </my-component>
+			  
+			
+			
 		</form>
 	</div>
 
@@ -48,7 +55,9 @@
 		<BarberCard></BarberCard>
 		<BarberCard></BarberCard>
     </div> -->
+	
 	<barber-card-list></barber-card-list>
+	<all-comment></all-comment>
 	
 
 	<!-- Footer Start -->

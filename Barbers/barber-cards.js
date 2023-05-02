@@ -3,6 +3,7 @@ import "./comment-count.js";
 class Barber_Card extends HTMLElement {
     constructor() {
         super();
+          
         this.innerHTML = html `
         <div class="barbers-cards">
         <div class="barbers-cards-container">
@@ -59,6 +60,7 @@ class Barber_Card extends HTMLElement {
             </div>
         </div>
     </div>`; 
+    
     }
     #Render(){
         this.innerHTML = html`
@@ -69,6 +71,8 @@ class Barber_Card extends HTMLElement {
        this.querySelector("#subButton").addEventListener("click", () => {
             const count = this.querySelector("comment-count");
             count.AddToCounter(this);
+            const allcount = document.querySelector("all-comment");
+            allcount.AddToCounter(this);
         });
     
     const event = new CustomEvent("newEvent", {

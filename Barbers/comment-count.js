@@ -4,6 +4,8 @@ class CustomerCommentCard extends HTMLElement{
     constructor(){
         super();
         this.counter = [];
+      
+
         this.innerHTML = html `
         <div>(${this.counter.length})</div>
         `
@@ -11,6 +13,7 @@ class CustomerCommentCard extends HTMLElement{
     }
 
     #Render(){
+        
         this.innerHTML = html `
         <div>(${this.counter.length})</div>
         `;
