@@ -38,6 +38,7 @@ class Barber_Card extends HTMLElement {
                 color: #D39B59;" for="Comment">Сэтгэгдэл 
                 <comment-count></comment-count></label>
                 <br>
+                <p class="valuecomment" id ="valueComment"></p>
                 <input style="box-sizing: border-box;
                 display: block;
                 width: 100%;
@@ -54,18 +55,26 @@ class Barber_Card extends HTMLElement {
                 <button style="color:#D39B59; border-radius: 5px; 
                 width: 20%; height: 25px;
                 margin-top: 8px;
-                margin-right: 0px" class="button buttonSubmit">Submit</button>
+                margin-right: 0px" class="button buttonSubmit" id="subButton">Submit</button>
             </div>
         </div>
     </div>`; 
     }
+    #Render(){
+        this.innerHTML = html`
+        <div>  </div>
+        `
+    }
     connectedCallback() {
-
+       this.querySelector("#subButton").addEventListener("click", () => {
+            const count = this.querySelector("comment-count");
+            count.AddToCounter(this);
+        });
     }
     disconnectedCallback() {
     
     }
-    attributeChangedCallback(attrName, oldVal, newVal) {
+    attributeChangedCallback(attrName, oldVal, newVal){
     
     }
 }

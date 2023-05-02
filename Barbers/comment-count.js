@@ -15,12 +15,17 @@ class CustomerCommentCard extends HTMLElement{
         <div>(${this.counter.length})</div>
         `;
     }
+    AddToCounter(comm) {
+        this.counter.push(comm);
+        this.#Render();
+    }
     connectedCallBack(){
 
     }
     disconnectedCallBack(){
         
     }
+
 }
 
 window.customElements.define('comment-count', CustomerCommentCard);
