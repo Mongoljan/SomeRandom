@@ -3,7 +3,7 @@ import "./barber-cards.js";
 class Barber_Card_List extends HTMLElement{
     constructor(){
         super();
-        this.innerHtML = html `
+        this.innerHTML = `
         <style>
         display:flex;
         flex-wrap: wrap; 
@@ -11,7 +11,7 @@ class Barber_Card_List extends HTMLElement{
         justify-content: center;
         </style>
 
-        <div class="card-list">
+        <div class="barbers-card-list">
         <barber-cards></barber-cards>
         <barber-cards></barber-cards>
         <barber-cards></barber-cards>

@@ -1,5 +1,5 @@
 import html from "./utility.js";
-
+import "./comment-count.js";
 class Barber_Card extends HTMLElement {
     constructor() {
         super();
@@ -31,12 +31,12 @@ class Barber_Card extends HTMLElement {
                 <p>Дотуур дугаар: 110</p>
             </div>
             <div>
-                <label style="display: inline-block;
+                <label style="display: flex;
                 margin-top: 10px;
                 margin-bottom: 10px;
                 font-weight: bold;
-                color: #D39B59;" for="Comment">Сэтгэгдэл</label>
-                <CustomerCommentCard></CustomerCommentCard>
+                color: #D39B59;" for="Comment">Сэтгэгдэл 
+                <comment-count></comment-count></label>
                 <br>
                 <input style="box-sizing: border-box;
                 display: block;
