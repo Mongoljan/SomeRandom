@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Online salon book service">
+    <meta name="keywords" content="Haircut, Service, Grades">
+    <meta name="author" content="Anar Orgilmaa Moogii">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Some randon websites for sale </title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <header>
+      <div class="topnav layout_header">
+        <div class="topnav_content">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-scissors"
+            viewBox="0 0 16 16" id="IconChangeColor">
+            <path
+              d="M3.5 3.5c-.614-.884-.074-1.962.858-2.5L8 7.226 11.642 1c.932.538 1.472 1.616.858 2.5L8.81 8.61l1.556 2.661a2.5 2.5 0 1 1-.794.637L8 9.73l-1.572 2.177a2.5 2.5 0 1 1-.794-.637L7.19 8.61 3.5 3.5zm2.5 10a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0zm7 0a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0z"
+              id="mainIconPathAttribute"></path>
+          </svg>
+          <a class="topnav_active" href="./index.html">Нүүр хуудас</a>
+          <a href="./Services.html">Үйлчилгээнүүд</a>
+          <a href="./Barbers.html">Үсчид</a>
+          <a href="./Branches/index.html">Салбарууд</a>
+          <a href="./AboutUs.html">Бидний тухай </a>
+        </div>
+        <div>
+          <a href="./Nevtreh.html">Нэвтрэх</a>
+          <a href="./Burtguuleh.html">Бүртгүүлэх</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="layout_main">
+        <div class="carousel-container">
+          <div class="inner-carousel">
+            <div class="track">
+              <div class="card-container">
+                <img alt="haircut-1" class="card"
+                  src="https://cdn.pixabay.com/photo/2018/08/21/23/29/fog-3622519_960_720.jpg"></img>
+              </div>
+              <div class="card-container">
+                <img alt="haircut-2" class="card"
+                  src="https://cdn.pixabay.com/photo/2018/08/21/23/29/fog-3622519_960_720.jpg"></img>
+              </div>
+              <div class="card-container">
+                <img alt="haircut-3" class="card"
+                  src="https://cdn.pixabay.com/photo/2018/08/21/23/29/fog-3622519_960_720.jpg"></img>
+              </div>
+              <div class="card-container">
+                <img alt="haircut-4" class="card"
+                  src="https://cdn.pixabay.com/photo/2018/08/21/23/29/fog-3622519_960_720.jpg"></img>
+              </div>
+              <div class="card-container">
+                <img alt="haircut-5" class="card"
+                  src="https://cdn.pixabay.com/photo/2018/08/21/23/29/fog-3622519_960_720.jpg"></img>
+              </div>
+              <div class="card-container">
+                <img alt="haircut-6" class="card"
+                  src="https://cdn.pixabay.com/photo/2018/08/21/23/29/fog-3622519_960_720.jpg"></img>
+              </div>
+              <div class="card-container">
+                <img alt="haircut-7" class="card"
+                  src="https://cdn.pixabay.com/photo/2018/08/21/23/29/fog-3622519_960_720.jpg"></img>
+              </div>
+              <div class="card-container">
+                <img alt="haircut-8" class="card"
+                  src="https://cdn.pixabay.com/photo/2018/08/21/23/29/fog-3622519_960_720.jpg"></img>
+              </div>
+              <div class="card-container">
+                <img alt="haircut-9" class="card"
+                  src="https://cdn.pixabay.com/photo/2018/08/21/23/29/fog-3622519_960_720.jpg"></img>
+              </div>
+              <div class="card-container">
+                <img alt="haircut-10" class="card"
+                  src="https://cdn.pixabay.com/photo/2018/08/21/23/29/fog-3622519_960_720.jpg"></img>
+              </div>
+              <div class="card-container">
+                <img alt="haircut-11" class="card"
+                  src="https://cdn.pixabay.com/photo/2018/08/21/23/29/fog-3622519_960_720.jpg"></img>
+              </div>
+              <div class="card-container">
+                <img alt="haircut-12" class="card"
+                  src="https://cdn.pixabay.com/photo/2018/08/21/23/29/fog-3622519_960_720.jpg"></img>
+              </div>
+            </div>
+            <div class="nav">
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+          </div>
+        </div>
+        <div style="display:flex;  justify-content: center;">
+          <a class="order-button" href="./Branches/index.html">Үйлчилгээ авах</a>
+        </div>
+      </div>
+
+
+      <script>
+        const prev = document.querySelector(".prev");
+        const next = document.querySelector(".next");
+        const carousel = document.querySelector(".carousel-container");
+        const track = document.querySelector(".track");
+        let width = carousel.offsetWidth / 3;
+        let index = 0;
+        window.addEventListener("resize", function () {
+          width = carousel.offsetWidth / 3;
+        });
+
+        next.addEventListener("click", function (e) {
+          e.preventDefault();
+          index = index + 1;
+          prev.classList.add("show");
+          track.style.transform = "translateX(" + index * -width + "px)";
+          if (track.offsetWidth - index * width < index * width) {
+            next.classList.add("hide");
+          }
+        });
+
+        prev.addEventListener("click", function () {
+          index = index - 1;
+          next.classList.remove("hide");
+          if (index === 0) {
+            prev.classList.remove("show");
+          }
+          track.style.transform = "translateX(" + index * -width + "px)";
+        });
+
+      </script>
+    </main>
+    <!-- Footer Start -->
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="footer-contact">
+                  <h2>Address</h2>
+                  <p><i class="fa fa-map-marker-alt"></i>mongol</p>
+                  <p><i class="fa fa-phone-alt"></i>+976 345 67890</p>
+                  <p><i class="fa fa-envelope"></i>info@example.com</p>
+                  <div class="footer-social">
+                    <a href="https://twitter.com/"><i class="fab fa-twitter"></i>.</a>
+                    <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i>.</a>
+                    <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i>.</a>
+                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i>.</a>
+                    <a href="https://www.linkedin.com"><i class="fab fa-linkedin-in"></i>.</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="footer-link">
+                  <h2>Quick Links</h2>
+                  <a href="https://www.facebook.com/mikomiko.miko.12382/">Terms of use</a>
+                  <a href="https://www.facebook.com/mikomiko.miko.12382/">Privacy policy</a>
+                  <a href="https://www.facebook.com/mikomiko.miko.12382/">Cookies</a>
+                  <a href="https://www.facebook.com/mikomiko.miko.12382/">Help</a>
+                  <a href="https://www.facebook.com/mikomiko.miko.12382/">FQAs</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="footer-newsletter">
+              <h2>Newsletter</h2>
+              <p>
+                Lorem ipsum dolor sit amet elit. Quisque eu lectus a leo dictum nec non quam. Tortor eu placerat
+                rhoncus, lorem quam iaculis felis, sed lacus neque id eros.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer End -->
+
+  </body>
+
+</html>

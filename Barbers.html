@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE >
+<html lang="mn">
 
 <head>
 	<meta charset="UTF-8">
@@ -10,7 +10,70 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-	<title></title>
+	<title>barbers</title>
+	<style>
+		* {box-sizing: border-box;}
+		/* #region RecentNews styles */
+		.recentNews {
+		  display:block; 
+		  margin:5px; 
+		  padding:5px;
+		  width:400px; 
+		  
+		  background-color:#eee; 
+		  opacity: 1;
+  
+		  animation-name: fadeInAnimation;
+		  animation-duration: 3s;
+		}
+  
+		.recentNews-thumb {
+		  display: inline-block; 
+		  height:80px;
+		}
+  
+		.recentNews-text{
+		  display:inline-block;
+		  height:70px;
+		  width: 300px;
+		  margin:0;
+		  vertical-align:top;
+		}
+  
+		.recentNews-header{
+		  font: normal normal 12px Verdana, sans-serif;
+		}
+		.recentNews-stat{
+		  text-align:right;
+		  color:gray;
+		  font-style:italic;
+		}
+  
+		.recentNews-shareCount{
+		  display:inline;
+		}
+  
+		.recentNews-pubdate{
+		  display:inline;
+		}
+  
+		@keyframes fadeInAnimation { 
+			0% { 
+				opacity: 0; 
+			} 
+			100% { 
+				opacity: 1; 
+			} 
+		} 
+		  /* #endregion  */
+	  </style>
+	  <script type="module" src="./modules/Barbers.js"></script>
+	  <script>
+		function getParameter(parameterName){
+			let parameters = new URLSearchParams(window.location.search);
+			return parameters.get(parameterName)
+		}
+	</script>
 	<header>
 		<div class="topnav">
 			<div class="topnav_content">
@@ -28,9 +91,10 @@
 			</div>
 		</div>
 	</header>
-</head>
+<head>
 
 <body>
+
 	<div style="justify-content: end; justify-items: end; display:flex; padding: 40px ">
 		<form id="form">
 			<input style="box-sizing: border-box;
@@ -54,16 +118,17 @@
 			cursor: pointer;" class="buttonSearch">Search</button>
 		</form>
 	</div>
+	<main id="main"></main>
 
 	<div style="display:flex; flex-wrap: wrap; margin-top: 60px; justify-content: center;">
 		<div class="barbers-cards">
 			<div class="barbers-cards-container">
 				<div style="padding-bottom: 20px;">
 					<div style="display:flex">
-						<img style="border-radius:50%; width:100px;"
-							src="https://e7.pngegg.com/pngimages/683/60/png-clipart-man-s-profile-illustration-computer-icons-user-profile-profile-ico-photography-silhouette-thumbnail.png"></img>
+						<img alt="profile" style="border-radius:50%; width:100px;"
+							src="https://e7.pngegg.com/pngimages/683/60/png-clipart-man-s-profile-illustration-computer-icons-user-profile-profile-ico-photography-silhouette-thumbnail.png">
 						<div>
-							<h3 style="margin-left: 20px;">Үсчин А</h3>
+							<h3 style="margin-left: 20px;" id="name1"></h3>
 							<div style="display:flex; justify-content:left;">
 								<div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
 								<div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
@@ -72,14 +137,14 @@
 								<div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
 							</div>
 							<div style="margin-left: 20px;">
-								<p>Салон: Matrix</p>
-								<p>Салбар: Парк-Од</p>
+								<p >Салон: <span id="salon1"></span></p>
+								<p>Салбар: <span id="address1"></span></p>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div>
-					<p>Холбогдох утас: ********</p>
+					<p>Холбогдох утас: <span id="phone1"></span></p>
 					<p>Дотуур дугаар: 110</p>
 				</div>
 				<div>
@@ -118,10 +183,10 @@
 			<div class="barbers-cards-container">
 				<div style="padding-bottom: 20px;">
 					<div style="display:flex">
-						<img style="border-radius:50%; width:100px;"
-							src="https://e7.pngegg.com/pngimages/683/60/png-clipart-man-s-profile-illustration-computer-icons-user-profile-profile-ico-photography-silhouette-thumbnail.png"></img>
+						<img alt="profile" style="border-radius:50%; width:100px;"
+							src="https://e7.pngegg.com/pngimages/683/60/png-clipart-man-s-profile-illustration-computer-icons-user-profile-profile-ico-photography-silhouette-thumbnail.png">
 						<div>
-							<h3 style="margin-left: 20px;">Үсчин А</h3>
+							<h3 style="margin-left: 20px;" id="name2"></h3>
 							<div style="display:flex; justify-content:left;">
 								<div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
 								<div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
@@ -130,14 +195,14 @@
 								<div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
 							</div>
 							<div style="margin-left: 20px;">
-								<p>Салон: Matrix</p>
-								<p>Салбар: Парк-Од</p>
+								<p >Салон: <span id="salon2"></span></p>
+								<p>Салбар: <span id="address2"></span></p>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div>
-					<p>Холбогдох утас: ********</p>
+					<p>Холбогдох утас: <span id="phone2"></span></p>
 					<p>Дотуур дугаар: 110</p>
 				</div>
 				<div>
@@ -155,7 +220,7 @@
 					padding: calc(var(--size-bezel) * 1.5) var(--size-bezel);
 					color: #D39B59;
 					background: transparent;
-					border-radius: 5px;" type="text" id="Comment" name="Comment" placeholder="Сэтгэгдэл бичих">
+					border-radius: 5px;" type="text"  name="Comment" placeholder="Сэтгэгдэл бичих">
 					<button style="color: grey; border-radius: 5px;
 					 width: 20%; height:25px;
 					 margin-left: 57%;
@@ -175,10 +240,10 @@
 			<div class="barbers-cards-container">
 				<div style="padding-bottom: 20px;">
 					<div style="display:flex">
-						<img style="border-radius:50%; width:100px;"
-							src="https://e7.pngegg.com/pngimages/683/60/png-clipart-man-s-profile-illustration-computer-icons-user-profile-profile-ico-photography-silhouette-thumbnail.png"></img>
+						<img alt="profile" style="border-radius:50%; width:100px;"
+							src="https://e7.pngegg.com/pngimages/683/60/png-clipart-man-s-profile-illustration-computer-icons-user-profile-profile-ico-photography-silhouette-thumbnail.png">
 						<div>
-							<h3 style="margin-left: 20px;">Үсчин А</h3>
+							<h3 style="margin-left: 20px;" id="name3"></h3>
 							<div style="display:flex; justify-content:left;">
 								<div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
 								<div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
@@ -187,14 +252,14 @@
 								<div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
 							</div>
 							<div style="margin-left: 20px;">
-								<p>Салон: Matrix</p>
-								<p>Салбар: Парк-Од</p>
+								<p >Салон: <span id="salon3"></span></p>
+								<p>Салбар: <span id="address3"></span></p>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div>
-					<p>Холбогдох утас: ********</p>
+					<p>Холбогдох утас: <span id="phone3"></span></p>
 					<p>Дотуур дугаар: 110</p>
 				</div>
 				<div>
@@ -212,7 +277,65 @@
 					padding: calc(var(--size-bezel) * 1.5) var(--size-bezel);
 					color: #D39B59;
 					background: transparent;
-					border-radius: 5px;" type="text" id="Comment" name="Comment" placeholder="Сэтгэгдэл бичих">
+					border-radius: 5px;" type="text"  name="Comment" placeholder="Сэтгэгдэл бичих">
+					<button style="color: grey; border-radius: 5px;
+					 width: 20%; height:25px;
+					 margin-left: 57%;
+					 margin-right: 5px ;" class="button buttonCancel">Reset</button>
+					<button style="color:#D39B59; border-radius: 5px; 
+					width: 20%; height: 25px;
+					margin-top: 8px;
+					margin-right: 0px" class="button buttonSubmit">Submit</button>
+				</div>
+			</div>
+
+
+		</div>
+  <div id="barbers"></div>
+				
+
+				<div class="barbers-cards">
+			<div class="barbers-cards-container">
+				<div style="padding-bottom: 20px;">
+					<div style="display:flex">
+						<img alt="profile" style="border-radius:50%; width:100px;"
+							src="https://e7.pngegg.com/pngimages/683/60/png-clipart-man-s-profile-illustration-computer-icons-user-profile-profile-ico-photography-silhouette-thumbnail.png">
+						<div>
+							<h3 style="margin-left: 20px;" id="name4"></h3>
+							<div style="display:flex; justify-content:left;">
+								<div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
+								<div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
+								<div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
+								<div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
+								<div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
+							</div>
+							<div style="margin-left: 20px;">
+								<p >Салон: <span id="salon4"></span></p>
+								<p>Салбар: <span id="address4"></span></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<p>Холбогдох утас: <span id="phone4"></span></p>
+					<p>Дотуур дугаар: 110</p>
+				</div>
+				<div>
+					<label style="display: inline-block;
+					margin-top: 10px;
+					margin-bottom: 10px;
+					font-weight: bold;
+					color: #D39B59;" for="Comment">Сэтгэгдэл</label>
+					<br>
+					<input style="box-sizing: border-box;
+					display: block;
+					width: 100%;
+					height: 30px;
+					border: 2px solid currentColor;
+					padding: calc(var(--size-bezel) * 1.5) var(--size-bezel);
+					color: #D39B59;
+					background: transparent;
+					border-radius: 5px;" type="text"  name="Comment" placeholder="Сэтгэгдэл бичих">
 					<button style="color: grey; border-radius: 5px;
 					 width: 20%; height:25px;
 					 margin-left: 57%;
@@ -227,14 +350,14 @@
 
 		</div>
 
-				<div class="barbers-cards">
+			<div class="barbers-cards">
 			<div class="barbers-cards-container">
 				<div style="padding-bottom: 20px;">
 					<div style="display:flex">
-						<img style="border-radius:50%; width:100px;"
-							src="https://e7.pngegg.com/pngimages/683/60/png-clipart-man-s-profile-illustration-computer-icons-user-profile-profile-ico-photography-silhouette-thumbnail.png"></img>
+						<img alt="profile" style="border-radius:50%; width:100px;"
+						src="https://e7.pngegg.com/pngimages/683/60/png-clipart-man-s-profile-illustration-computer-icons-user-profile-profile-ico-photography-silhouette-thumbnail.png">
 						<div>
-							<h3 style="margin-left: 20px;">Үсчин А</h3>
+							<h3 style="margin-left: 20px;" id="name5"></h3>
 							<div style="display:flex; justify-content:left;">
 								<div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
 								<div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
@@ -243,14 +366,14 @@
 								<div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
 							</div>
 							<div style="margin-left: 20px;">
-								<p>Салон: Matrix</p>
-								<p>Салбар: Парк-Од</p>
+								<p >Салон: <span id="salon5"></span></p>
+								<p>Салбар: <span id="address5"></span></p>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div>
-					<p>Холбогдох утас: ********</p>
+					<p>Холбогдох утас: <span id="phone5"></span></p>
 					<p>Дотуур дугаар: 110</p>
 				</div>
 				<div>
@@ -268,119 +391,7 @@
 					padding: calc(var(--size-bezel) * 1.5) var(--size-bezel);
 					color: #D39B59;
 					background: transparent;
-					border-radius: 5px;" type="text" id="Comment" name="Comment" placeholder="Сэтгэгдэл бичих">
-					<button style="color: grey; border-radius: 5px;
-					 width: 20%; height:25px;
-					 margin-left: 57%;
-					 margin-right: 5px ;" class="button buttonCancel">Reset</button>
-					<button style="color:#D39B59; border-radius: 5px; 
-					width: 20%; height: 25px;
-					margin-top: 8px;
-					margin-right: 0px" class="button buttonSubmit">Submit</button>
-				</div>
-			</div>
-
-
-		</div>
-
-				<div class="barbers-cards">
-			<div class="barbers-cards-container">
-				<div style="padding-bottom: 20px;">
-					<div style="display:flex">
-						<img style="border-radius:50%; width:100px;"
-							src="https://e7.pngegg.com/pngimages/683/60/png-clipart-man-s-profile-illustration-computer-icons-user-profile-profile-ico-photography-silhouette-thumbnail.png"></img>
-						<div>
-							<h3 style="margin-left: 20px;">Үсчин А</h3>
-							<div style="display:flex; justify-content:left;">
-								<div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
-								<div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
-								<div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
-								<div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
-								<div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
-							</div>
-							<div style="margin-left: 20px;">
-								<p>Салон: Matrix</p>
-								<p>Салбар: Парк-Од</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div>
-					<p>Холбогдох утас: ********</p>
-					<p>Дотуур дугаар: 110</p>
-				</div>
-				<div>
-					<label style="display: inline-block;
-					margin-top: 10px;
-					margin-bottom: 10px;
-					font-weight: bold;
-					color: #D39B59;" for="Comment">Сэтгэгдэл</label>
-					<br>
-					<input style="box-sizing: border-box;
-					display: block;
-					width: 100%;
-					height: 30px;
-					border: 2px solid currentColor;
-					padding: calc(var(--size-bezel) * 1.5) var(--size-bezel);
-					color: #D39B59;
-					background: transparent;
-					border-radius: 5px;" type="text" id="Comment" name="Comment" placeholder="Сэтгэгдэл бичих">
-					<button style="color: grey; border-radius: 5px;
-					 width: 20%; height:25px;
-					 margin-left: 57%;
-					 margin-right: 5px ;" class="button buttonCancel">Reset</button>
-					<button style="color:#D39B59; border-radius: 5px; 
-					width: 20%; height: 25px;
-					margin-top: 8px;
-					margin-right: 0px" class="button buttonSubmit">Submit</button>
-				</div>
-			</div>
-
-
-		</div>
-
-				<div class="barbers-cards">
-			<div class="barbers-cards-container">
-				<div style="padding-bottom: 20px;">
-					<div style="display:flex">
-						<img style="border-radius:50%; width:100px;"
-							src="https://e7.pngegg.com/pngimages/683/60/png-clipart-man-s-profile-illustration-computer-icons-user-profile-profile-ico-photography-silhouette-thumbnail.png"></img>
-						<div>
-							<h3 style="margin-left: 20px;">Үсчин А</h3>
-							<div style="display:flex; justify-content:left;">
-								<div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
-								<div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
-								<div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
-								<div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
-								<div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
-							</div>
-							<div style="margin-left: 20px;">
-								<p>Салон: Matrix</p>
-								<p>Салбар: Парк-Од</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div>
-					<p>Холбогдох утас: ********</p>
-					<p>Дотуур дугаар: 110</p>
-				</div>
-				<div>
-					<label style="display: inline-block;
-					margin-top: 10px;
-					margin-bottom: 10px;
-					font-weight: bold;
-					color: #D39B59;" for="Comment">Сэтгэгдэл</label>
-					<br>
-					<input style="box-sizing: border-box;
-					display: block;
-					width: 100%;
-					height: 30px;
-					border: 2px solid currentColor;
-					padding: calc(var(--size-bezel) * 1.5) var(--size-bezel);
-					color: #D39B59;
-					background: transparent;
-					border-radius: 5px;" type="text" id="Comment" name="Comment" placeholder="Сэтгэгдэл бичих">
+					border-radius: 5px;" type="text"  name="Comment" placeholder="Сэтгэгдэл бичих">
 					<button style="color: grey; border-radius: 5px;
 					 width: 20%; height:25px;
 					 margin-left: 57%;
@@ -442,6 +453,47 @@
 	</div>
 	<!-- Footer End -->
 
+
+	<script>
+		class Barber {
+      constructor(fistName, phone, profile, intro,grade, salon, address) {
+      this.fistName = fistName;
+      this.phone = phone;
+      this.profile=profile;
+      this.intro=intro;
+      this.grade=grade;
+	  this.salon=salon;
+	  this.address=address;
+    }
+  }
+
+		fetch('barber.json')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                appendData(data);
+            })
+            .catch(function (err) {
+                console.log('error: ' + err);
+            });
+			function appendData(data) {
+			
+            for (var i = 0; i < data.length; i++) {
+				const Hairdresser= new Barber(data[i].firstName,data[i].phone,data[i].profile,data[i].intro, data[i].grade, data[i].salon,data[i].address);
+			
+
+				const names=document.querySelectorAll('[id^=name]');
+				names[i].innerHTML=Hairdresser.fistName;
+				const phones=document.querySelectorAll('[id^=phone]');
+				phones[i].innerHTML=Hairdresser.phone;
+				const salon=document.querySelectorAll('[id^=salon]');
+				salon[i].innerHTML=Hairdresser.salon;
+				const address=document.querySelectorAll('[id^=address]');
+				address[i].innerHTML=Hairdresser.address;
+            }
+        }
+	</script>
 </body>
 
 </html>

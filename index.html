@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Some randon websites for sale </title>
     <link rel="stylesheet" href="css/style.css">
-   
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
   </head>
@@ -21,9 +21,9 @@
           
         <a class="topnav_active" href="./index.html" >Нүүр хуудас</a>
         <a href="./Services.html">Үйлчилгээнүүд</a>
-        <a href="./Barbers.html">Үсчид</a>
+        <a href="./Barbers.html?sort=grades">Үсчид</a>
         <a href="./Branches/index.html">Салбарууд</a>
-        <a href="./AboutUs.html">Бидний тухай </a>
+        <a href="./AboutUs.html?content=about">Бидний тухай </a>
     </div>
       </div>
 </header>
@@ -111,6 +111,16 @@ prev.addEventListener("click", function () {
   }
   track.style.transform = "translateX(" + index * -width + "px)";
 });
+class Barber {
+    constructor(name, phone) {
+      this.fistName = name;
+      this.phone = phone;
+      this.profile=profile;
+      this.intro=intro;
+      this.grade=grade;
+    }
+  }
+  
 
     </script>
 </main>

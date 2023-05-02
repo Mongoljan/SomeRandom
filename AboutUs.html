@@ -8,6 +8,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
 	<title></title>
+	<script>
+		function getParameter(parameterName){
+			let parameters = new URLSearchParams(window.location.search);
+			return parameters.get(parameterName)
+		}
+	</script>
 	<header>
 		<div class="topnav">
 			<div class="topnav_content">
@@ -22,23 +28,8 @@
 	</header>
 </head>
 <body>
-	<form id="form"> 
-		<input type="search" id="query" name="q" placeholder="Үсчний нэрээр хайх">
-		<button>Search</button>
-    </form>
-    <a href="./matrixBranch.html">
-    	<div>
-    	    <img src="">
-    	    <p>Matrix</p>
-        </div>
-    </a>
-    <a href="./SQueenBranch.html">
-    	<div>
-    	    <img src="">
-    	    <p>S queen</p>
-        </div>
-    </a>
-    
+
 </body>
 </html>
+
 
