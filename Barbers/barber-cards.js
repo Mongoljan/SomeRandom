@@ -1,5 +1,6 @@
 import html from "./utility.js";
 import "./comment-count.js";
+import "./SumComment.js";
 class Barber_Card extends HTMLElement {
     constructor() {
         super();
@@ -8,11 +9,11 @@ class Barber_Card extends HTMLElement {
         <div class="barbers-cards">
         <div class="barbers-cards-container">
             <div style="padding-bottom: 20px;">
-                <div style="display:flex">
+                <div style="display: ${this.getAttribute("delgets")}">
                     <img style="border-radius:50%; width:100px;"
                         src="https://e7.pngegg.com/pngimages/683/60/png-clipart-man-s-profile-illustration-computer-icons-user-profile-profile-ico-photography-silhouette-thumbnail.png"></img>
                     <div>
-                        <h3 style="margin-left: 20px;">Үсчин А</h3>
+                        <h3 style="margin-left: 20px; color: ${this.getAttribute("BarberTextColor")}">Үсчин А</h3>
                         <div style="display:flex; justify-content:left;">
                             <div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
                             <div style="width:10px ; margin-right:-70px" class="five-pointed-star"></div>
@@ -32,7 +33,7 @@ class Barber_Card extends HTMLElement {
                 <p>Дотуур дугаар: 110</p>
             </div>
             <div>
-                <label style="display: flex;
+                <label style="display: flex; 
                 margin-top: 10px;
                 margin-bottom: 10px;
                 font-weight: bold;
@@ -60,12 +61,6 @@ class Barber_Card extends HTMLElement {
             </div>
         </div>
     </div>`; 
-    
-    }
-    #Render(){
-        this.innerHTML = html`
-        <div>  </div>
-        `
     }
     connectedCallback() {
        this.querySelector("#subButton").addEventListener("click", () => {
@@ -81,6 +76,7 @@ class Barber_Card extends HTMLElement {
         cancelable: false,
     });
     this.dispatchEvent(event);  //https://www.youtube.com/watch?v=hIv22aTl3-g eniig ashila
+         
     }
     disconnectedCallback() {
     
