@@ -70,6 +70,13 @@ class Barber_Card extends HTMLElement {
             const count = this.querySelector("comment-count");
             count.AddToCounter(this);
         });
+    
+    const event = new CustomEvent("newEvent", {
+        detail: {},
+        bubbles: false,
+        cancelable: false,
+    });
+    this.dispatchEvent(event);  //https://www.youtube.com/watch?v=hIv22aTl3-g eniig ashila
     }
     disconnectedCallback() {
     
