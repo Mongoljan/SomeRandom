@@ -4,6 +4,7 @@ import "./SumComment.js";
 class Barber_Card extends HTMLElement {
     constructor() {
         super();
+        const shadowRoot = this.attachShadow({mode: "open"});
         this.innerHTML = html`
         <div class="barbers-cards">
         <div class="barbers-cards-container">
@@ -61,11 +62,6 @@ class Barber_Card extends HTMLElement {
         </div>
     </div>`; 
     }
-    #Render(){
-        this.innerHTML = html`
-        <div>  </div>
-        `
-    }
     connectedCallback() {
        this.querySelector("#subButton").addEventListener("click", () => {
             const count = this.querySelector("comment-count");
@@ -78,6 +74,7 @@ class Barber_Card extends HTMLElement {
         cancelable: false,
     });
     this.dispatchEvent(event);  //https://www.youtube.com/watch?v=hIv22aTl3-g eniig ashila
+         
     }
     disconnectedCallback() {
     
