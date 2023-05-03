@@ -4,7 +4,7 @@ import "./SumComment.js";
 class Barber_Card extends HTMLElement {
     constructor() {
         super();
-        const shadowRoot = this.attachShadow({mode: "open"});
+        //const shadowRoot = this.attachShadow({mode: "open"});
         this.innerHTML = html`
         <div class="barbers-cards">
         <div class="barbers-cards-container">
