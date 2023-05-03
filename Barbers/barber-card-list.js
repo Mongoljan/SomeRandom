@@ -6,6 +6,10 @@ class Barber_Card_List extends HTMLElement{
         this.#Render();
     }
 
+
+    //barbers cardnii todorhoi element ruu handaad (jishee ni uschnii ner oruulah span element uusgeed) 
+    //ug elementdee id ogood id-r ni damjuulj ogogdloo oruulahuu??????????????????
+
     #Render(){
         this.innerHTML =`
         <style>
